@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# 🏛 Complaint Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React.js application** for managing public complaints with role-based access for citizens and department officials. The app allows users to sign up, log in, file complaints, and track their statuses, while officials can update statuses, provide descriptions, and manage complaints.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 👤 User (Citizen)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Sign up with profile photo and details.
+* Log in securely with stored credentials.
+* File complaints with relevant details.
+* View complaint status updates in real-time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🏢 Department Official
 
-### `npm test`
+* Access **Resolve Complaints** page.
+* Search and filter complaints.
+* Update complaint status (`Pending`, `Work Initiation`, `In Progress`, `Completed`, `Rejected`).
+* Provide department-side description.
+* Report violations and mark complaints accordingly.
+* Like button support for engagement.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔒 General
 
-### `npm run build`
+* Data persistence via **localStorage** (no backend).
+* Role-based navigation (different views for citizens and officials).
+* Profile page with editable fields and photo preview.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+complaint-management/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Home.js
+│   │   ├── Signup.js
+│   │   ├── Login.js
+│   │   ├── Profile.js
+│   │   ├── Complaints.js
+│   │   └── ResolveComplaints.js
+│   ├── styles/
+│   │   ├── home.css
+│   │   ├── signup.css
+│   │   ├── profile.css
+│   │   ├── complaints.css
+│   │   └── resolveComplaints.css
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Installation & Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/yourusername/complaint-management.git
+cd complaint-management
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies**
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Start the development server**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+4. Open in browser:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧩 Usage
 
-### Making a Progressive Web App
+* **Citizens**: Sign up → Log in → File complaints → Track status.
+* **Officials**: Log in → Go to *Resolve Complaints* → Update status / description.
+* **Profile page**: Edit personal info, preview photos, update details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🛠 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **Frontend**: React.js (functional components + hooks)
+* **Styling**: CSS (modular per component)
+* **Storage**: Browser localStorage (temporary, no backend)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📌 Future Improvements
 
-### `npm run build` fails to minify
+* Integrate real backend (Node.js + Express + MongoDB).
+* Add authentication & JWT tokens.
+* Role-based authorization.
+* File upload handling with cloud storage.
+* Real-time complaint tracking via WebSocket.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🤝 Contributing
+
+1. Fork this repository.
+2. Create a new branch (`feature/new-feature`).
+3. Commit changes (`git commit -m 'Add new feature'`).
+4. Push to your branch (`git push origin feature/new-feature`).
+5. Open a Pull Request.
