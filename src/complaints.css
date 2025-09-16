@@ -1,0 +1,290 @@
+/* Container */
+.complaint-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Form */
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.complaint-form label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.complaint-form input,
+.complaint-form select,
+.complaint-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+.location-box {
+  display: flex;
+  gap: 10px;
+}
+
+.location-btn {
+  padding: 8px 14px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.location-btn:hover {
+  background: #2980b9;
+}
+
+/* Files */
+.file-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.file-item {
+  background: #f4f6f7;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-item button {
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Submit */
+.submit-btn {
+  padding: 12px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1e8449;
+}
+
+/* Empty message */
+.empty-msg {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Complaint Cards */
+.complaints-list {
+  display: grid;
+  gap: 20px;
+}
+
+.complaint-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fefefe;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.05);
+}
+
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complaint-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #f1c40f;
+  color: #fff;
+}
+
+.status.resolved {
+  background: #27ae60;
+  color: #fff;
+}
+
+.status.rejected {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.files-section {
+  margin-top: 10px;
+}
+
+.files-section ul {
+  margin: 5px 0 0 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+.delete-btn {
+  margin-top: 15px;
+  padding: 8px 14px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+.complaints-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c0392b;
+}
+
+/* Search + filter */
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.search-filter input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.filter-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Complaints grid */
+.complaints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+}
+.complaint-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.status.open { background: #f1c40f; }
+.status.resolved { background: #27ae60; color: #fff; }
+.status.pending { background: #e67e22; color: #fff; }
+
+.complaint-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.complaint-actions button {
+  background: #eee;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Map section */
+.map-section {
+  margin: 40px 0;
+}
+.map-placeholder {
+  height: 250px;
+  background: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/* Trending complaints */
+.trending-section {
+  margin: 40px 0;
+}
+.trending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.trending-card {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}

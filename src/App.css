@@ -1,38 +1,320 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header {
+  background: #003366;
+  color: white;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 30px;
   align-items: center;
+}
+
+.app-header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px;
+  background: #e9ecef;
+  position: relative;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.nav-btn:first-of-type {
+  left: 10px;
+}
+.nav-btn:last-of-type {
+  right: 10px;
+}
+
+.map-placeholder {
+  margin: 20px auto;
+  width: 80%;
+  height: 300px;
+  background: #d0d8e0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: #555;
+  border-radius: 6px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.complaints-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.complaint-card {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-card h3 {
+  color: #003366;
+}
+
+.complaint-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.intensity {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.intensity.high {
+  background: #dc3545;
+  color: white;
+}
+.intensity.medium {
+  background: #ffc107;
+  color: black;
+}
+.intensity.low {
+  background: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.like-btn {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.analytics {
+  padding: 20px;
+  background: #f1f3f5;
+}
+
+.card-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.small-card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.leaderboard {
+  padding: 20px;
+}
+
+.vertical-scroll {
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.leaderboard-item {
+  margin-bottom: 8px;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.rank-card {
+  min-width: 150px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.app-footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+/* Complaints vertical scroll */
+.complaints-list {
+  max-height: 500px; /* fixed height */
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Analytics horizontal scroll */
+.analytics-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.analytics-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.complaints-list::-webkit-scrollbar {
+  width: 8px;
+}
+/* 🔍 Shared search bars */
+.search-section,
+.leaderboard-search {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 15px auto;
+  width: 90%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-section input,
+.leaderboard-search input,
+.search-section select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 250px;
+}
+
+.search-section select {
+  width: 150px;
+  background: #f8f9fa;
+}
+
+/* 📋 Complaints vertical scroll */
+.complaints-list {
+  max-height: 500px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* 🏙️ Analytics horizontal scroll */
+.analytics-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px 0;
+}
+
+.small-card {
+  min-width: 180px;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 🎨 Different color palette for city cards */
+.small-card:nth-child(5n+1) { background: #003366; }
+.small-card:nth-child(5n+2) { background: #6c757d; }
+.small-card:nth-child(5n+3) { background: #28a745; }
+.small-card:nth-child(5n+4) { background: #dc3545; }
+.small-card:nth-child(5n+5) { background: #ffc107; color: #000; }
+
+/* 🏆 Leaderboard */
+.leaderboard {
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+.leaderboard-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.rank-card {
+  min-width: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 🎨 Palette for leaderboard */
+.rank-card:nth-child(4n+1) { background: #17a2b8; }
+.rank-card:nth-child(4n+2) { background: #6f42c1; }
+.rank-card:nth-child(4n+3) { background: #20c997; }
+.rank-card:nth-child(4n+4) { background: #fd7e14; }
+
+/* Scrollbars (optional for style) */
+.complaints-list::-webkit-scrollbar,
+.analytics-scroll::-webkit-scrollbar,
+.leaderboard-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.complaints-list::-webkit-scrollbar-thumb,
+.analytics-scroll::-webkit-scrollbar-thumb,
+.leaderboard-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
 }

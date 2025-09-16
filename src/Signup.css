@@ -1,0 +1,170 @@
+/* Signup.css */
+
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #003366; /* deep blue tone similar to gov sites */
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.signup-form input[type="tel"],
+.signup-form input[type="date"],
+.signup-form input[type="file"],
+.signup-form input[type="checkbox"]{
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-form input[type="checkbox"] {
+  width: 20px;
+    height: 15px;
+}
+.small-btn {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #e7e7e7;
+  color: #333;
+  border: 1px solid #999;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background-color: #dcdcdc;
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  background-color: #0056a6; /* gov-blue-ish */
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #004080;
+}
+
+.login-links {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.login-links p {
+  margin: 0.5rem 0;
+}
+
+.login-links a {
+  color: #0056a6;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar styling if needed */
+.signup-box {
+  max-height: calc(100vh - 150px); /* so it scrolls on smaller heights */
+  overflow-y: auto;
+}
+
+.signup-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signup-box::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+.signup-box::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+.auth-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.small-btn {
+  padding: 6px 12px;
+  background: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background: #bbb;
+}
+
+.small-btn.verified {
+  background: #4caf50; /* Green for verified */
+  color: white;
+  font-weight: bold;
+}
+.profile-photo,
+.profile-photo-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 10px 0;
+}
+
+.id-proof-preview {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background: #fafafa;
+}

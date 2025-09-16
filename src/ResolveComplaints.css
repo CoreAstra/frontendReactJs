@@ -1,0 +1,48 @@
+.resolve-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+}
+
+.complaints-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.complaint-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.complaint-card h3 {
+  margin: 0 0 5px 0;
+}
+
+.complaint-card textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 6px;
+  resize: vertical;
+}
+
+.complaint-card button,
+.complaint-card select {
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
